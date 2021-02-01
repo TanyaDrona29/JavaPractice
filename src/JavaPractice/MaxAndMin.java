@@ -11,6 +11,7 @@ public class MaxAndMin {
             System.out.println("enter element");
             array[i] = scanner.nextInt();
         }
+        int min = array[0];
         System.out.println();
         System.out.println("original array:");
         for (int i = 0; i <array.length; i++) {                                     //printing the original array
@@ -25,5 +26,13 @@ public class MaxAndMin {
         }
         System.out.println("max is:");                                           //printing the max number
         System.out.println(max);
+
+        for (int i = 0; i <array.length; i++) {                                //printing the min number
+            if (array[i]<min){
+                min = array[i];
+            }
+        }
+        System.out.println("min is:");
+        System.out.println(min);
     }
 }
