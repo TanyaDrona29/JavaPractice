@@ -13,7 +13,7 @@ public class MinAndMaxOfArray {
                 min = array[i];
             }
         }
-        System.out.println(min);
-        System.out.println(max);
+        System.out.println("The mininum number is"+min);
+        System.out.println("The maximum number is"+max);
     }
 }
