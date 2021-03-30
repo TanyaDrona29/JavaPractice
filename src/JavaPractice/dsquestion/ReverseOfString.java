@@ -1,10 +1,16 @@
 package JavaPractice.dsquestion;
 
+import java.util.Scanner;
+
 public class ReverseOfString {
     public static void main(String[] args) {
-       String string[] = {"h","e","l","l","o"};
-        for (int i = string.length-1; i>=0; i--) {
-            System.out.print(string[i] + " ");
-        }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter");
+        String string = scanner.nextLine();
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(string);
+        stringBuilder.reverse();
+        System.out.println(stringBuilder);
     }
 }
+
