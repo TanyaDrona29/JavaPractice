@@ -20,7 +20,7 @@ public class Leaders {
         //printing the last element of array
         System.out.println(array[size-1]);
         //loop to check remaining elements
-        //fing the maximum element and print it
+        //fing the maximum element and printing then
         for (int i = size-2; i >0 ; i--) {
             if (array[i]> max){
                 max = array[i];
