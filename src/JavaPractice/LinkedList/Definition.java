@@ -39,4 +39,16 @@ public class Definition {
             }
         }
     }
+
+    //deleting first node
+
+    public Node deleteFirst(){
+        if(head == null){
+            return null;
+        }
+        Node temp = head;
+        head = head.getNext();
+        temp.setNext(null);
+        return temp;
+    }
 }
