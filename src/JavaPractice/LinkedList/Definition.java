@@ -29,6 +29,7 @@ public class Definition {
     //printing elements of linked list
 
     public void printList(){
+        System.out.println();
         System.out.println("printing list---");
         Node temp = head;
         while(temp != null){
@@ -68,5 +69,19 @@ public class Definition {
         //previous points to null so that the last elemnet can be deleted
         previous.setNext(null);
         return temp;
+    }
+
+    //searching an elemnet in the list
+    public boolean searchElement(int searchKey){
+        Node temp = head;
+        boolean response = false;
+        while(temp != null){
+            if(temp.getData() == searchKey){
+                response = true;
+                return response;
+            }
+            temp = temp.getNext();
+        }
+        return response;
     }
 }
