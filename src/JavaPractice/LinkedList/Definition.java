@@ -11,7 +11,7 @@ public class Definition {
     }
 
     //inserting element to linked list at the end
-
+    //temp holds the value of head
     public void insertAtTheEnd(int newData){
         Node newNode = new Node(newData);
         if(head == null){
@@ -49,6 +49,24 @@ public class Definition {
         Node temp = head;
         head = head.getNext();
         temp.setNext(null);
+        return temp;
+    }
+
+    //deleting last node
+    public Node deleteLast(){
+        //if condition true then either no elemnet is present in the list or only one element is present
+        if(head == null || head.getNext()==null ){
+            return head;
+        }
+        //temp holds the head value and previous for traversing to the second last element of the list
+        Node temp = head;
+        Node previous = null;
+        while(temp.getNext() != null){
+            previous = temp;
+            temp = temp.getNext();
+        }
+        //previous points to null so that the last elemnet can be deleted
+        previous.setNext(null);
         return temp;
     }
 }
