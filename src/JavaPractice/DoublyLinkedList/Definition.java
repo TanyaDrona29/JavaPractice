@@ -8,7 +8,7 @@ public class Definition {
     public boolean isEmpty(){
         return head == null;
     }
-    //inserting elements at the begning of the list
+    //inserting elements at the beginning of the list
     public void insertAtBeg(int newData){
         Node newNode = new Node(newData);
         if(isEmpty()){
@@ -31,6 +31,24 @@ public class Definition {
             newNode.setPrevious(tail);
         }
         tail = newNode;
+    }
+    //deleting the first node
+    public Node deleteFirst(){
+        Node temp = head;
+        if (isEmpty()) {
+            System.out.println("list is empty");
+        }
+        //now if only one element is present in the list then we need to remove both the tail and head pointer
+        //So we assign null value to tail
+        else if(head == tail){
+            tail = null;
+        }
+        else {
+            head.getNext().setPrevious(null);
+        }
+        head = head.getNext();
+        temp.setNext(null);
+        return temp;
     }
     //printing elemnets from beginning
     public void printList(){
