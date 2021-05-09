@@ -8,5 +8,11 @@ public class Main {
         definition.insertAtBeg(20);
         definition.insertAtBeg(10);
         definition.printList();
+        definition.insertAtEnd(1);
+        definition.insertAtEnd(2);
+        definition.insertAtEnd(3);
+        definition.printList();
+        definition.deleteFirst();
+        definition.printList();
     }
 }
