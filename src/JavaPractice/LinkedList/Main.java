@@ -19,13 +19,15 @@ public class Main {
         definition.printList(definition.head);
         definition.deleteFirst();
         System.out.println();
+        System.out.println("deleting the first element");
         definition.printList(definition.head);
         definition.deleteLast();
         System.out.println();
+        System.out.println("deleting the last element");
         definition.printList(definition.head);
         if(definition.searchElement(10)){
             System.out.println();
-            System.out.println("element found");
+            System.out.println("element found ");
         }
         else{
             System.out.println();
