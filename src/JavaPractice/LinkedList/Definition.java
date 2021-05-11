@@ -26,21 +26,6 @@ public class Definition {
         temp.setNext(newNode);
     }
 
-    //printing elements of linked list
-
-    public void printList(){
-        System.out.println();
-        System.out.println("printing list---");
-        Node temp = head;
-        while(temp != null){
-            System.out.print(temp.getData());
-            temp = temp.getNext();
-            if(temp != null){
-                System.out.print("-->");
-            }
-        }
-    }
-
     //deleting first node
 
     public Node deleteFirst(){
@@ -71,7 +56,7 @@ public class Definition {
         return temp;
     }
 
-    //searching an elemnet in the list
+    //searching an element in the list
     public boolean searchElement(int searchKey){
         Node temp = head;
         boolean response = false;
@@ -83,5 +68,31 @@ public class Definition {
             temp = temp.getNext();
         }
         return response;
+    }
+    //reversing a linked list
+    public Node reverse(Node node){
+        if(head == null){
+            System.out.println("list is empty");
+        }
+        Node temp = head;
+        Node previous = null;
+        Node next = null;
+        while(temp != null){
+            next = temp.getNext();
+            temp.setNext(previous);
+            previous = temp;
+            temp = next;
+        }
+        node = previous;
+        return node;
+    }
+
+    //printing list
+    public void printList(Node node){
+        System.out.println();
+        while(node != null){
+            System.out.print(node.getData() + " ");
+            node = node.getNext();
+        }
     }
 }
