@@ -84,12 +84,30 @@ public class Definition {
             temp = next;
         }
         node = previous;
-        return node;
+        return previous;
     }
+    //reverse the elements in groups of given size
+    public Node reverseInGroup(Node head,int k){
+        if(head == null)
+            System.out.println("list is empty");
+        Node temp = head;
+        Node previous = null;
+        Node next = null;
+        int count = 0;
+        while(count < k && temp != null){
+            next = temp.getNext();
+            temp.setNext(previous);
+            previous = temp;
+            temp = next;
+            count++;
+        }
+        if(next != null)
+            head.setNext(reverseInGroup(next,k));
 
+        return previous;
+    }
     //printing list
     public void printList(Node node){
-        System.out.println();
         while(node != null){
             System.out.print(node.getData() + " ");
             node = node.getNext();
