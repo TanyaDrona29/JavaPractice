@@ -108,6 +108,7 @@ public class Definition {
     }
     //printing list
     public void printList(Node node){
+        System.out.println();
         while(node != null){
             System.out.print(node.getData() + " ");
             node = node.getNext();
