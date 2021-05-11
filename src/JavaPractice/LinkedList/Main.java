@@ -7,11 +7,16 @@ public class Main {
         definition.insertAtTheEnd(30);
         definition.insertAtTheBeg(10);
         definition.insertAtTheEnd(40);
-        definition.printList();
+        System.out.println("printing the list");
+        definition.printList(definition.head);
+        definition.head = definition.reverse(definition.head);
+        System.out.println();
+        System.out.println("printing the reversed linked list");
+        definition.printList(definition.head);
         definition.deleteFirst();
-        definition.printList();
+        definition.printList(definition.head);
         definition.deleteLast();
-        definition.printList();
+        definition.printList(definition.head);
         if(definition.searchElement(10)){
             System.out.println();
             System.out.println("element found");
@@ -20,5 +25,5 @@ public class Main {
             System.out.println();
             System.out.println("element not found");
         }
-    }
+  }
 }
