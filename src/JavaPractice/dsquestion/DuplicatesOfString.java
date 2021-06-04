@@ -12,7 +12,7 @@ public class DuplicatesOfString {
 
         for (int i = 0; i < chars; i++)
             if (count[i] > 1)
-                System.out.println("character is "+(char) (i) + " and count = " + count[i]);
+                System.out.println("character is "+(char) (i) + " and count is =" + count[i]);
     }
     public static void main(String[] args) {
         String str = "test string";
