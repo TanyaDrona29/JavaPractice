@@ -4,6 +4,7 @@ import java.util.LinkedHashSet;
 
 public class RemoveDuplicate {
     public static void remove(int[] arr){
+        //using hashset
         LinkedHashSet<Integer>hashSet = new LinkedHashSet<Integer>();
         for (int i = 0; i < arr.length ; i++) {
             hashSet.add(arr[i]);
