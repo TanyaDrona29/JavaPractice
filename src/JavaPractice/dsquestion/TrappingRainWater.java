@@ -27,11 +27,10 @@ public class TrappingRainWater {
         }
         return max;
     }
-
     public static void main(String[] args) {
         int[] arr = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
         int n =  arr.length;
         int result = totalWater(arr,n);
-        System.out.println(result);
+        System.out.println("total amount of water trapped is"+ result);
     }
 }
